@@ -10,16 +10,16 @@ function fizzBuzz() {
   const array = [];
 
   for (let i = 1; i <= 100; i++) {
-    if (i%3 === 0) {
-      array.push('fizz')
+    if (i%3 === 0 && i%5 === 0) {
+      array.push('fizzbuzz')
     } else if (i%5 === 0) {
       array.push('buzz')
-    } else if (i%3 === 0 && i%5 === 0) {
-      array.push('fizzbuzz');
+    } else if (i%3 === 0) {
+      array.push('fizz');
     } else {
       array.push(i);
     }
   }
-  console.log(array);
+  console.log(array.join('\r\n'));
 }
 fizzBuzz();
